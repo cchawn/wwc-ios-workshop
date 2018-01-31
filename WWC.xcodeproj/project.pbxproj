@@ -14,9 +14,9 @@
 		43EABFC72021423F00D2870C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EABFC52021423F00D2870C /* LaunchScreen.storyboard */; };
 		43EABFD22021423F00D2870C /* WWCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EABFD12021423F00D2870C /* WWCTests.swift */; };
 		43EABFDD20214A8200D2870C /* ImageLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EABFDC20214A8200D2870C /* ImageLabelCell.swift */; };
-		43FDF24520214DEE007F004F /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDF24420214DEE007F004F /* Show.swift */; };
 		43FDF24920214E98007F004F /* tvShows.json in Resources */ = {isa = PBXBuildFile; fileRef = 43FDF24620214E97007F004F /* tvShows.json */; };
 		43FDF24B20214E98007F004F /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDF24820214E98007F004F /* Show.swift */; };
+		43FDF24D20214EEF007F004F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDF24C20214EEF007F004F /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,9 @@
 		43EABFD12021423F00D2870C /* WWCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWCTests.swift; sourceTree = "<group>"; };
 		43EABFD32021423F00D2870C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43EABFDC20214A8200D2870C /* ImageLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelCell.swift; sourceTree = "<group>"; };
-		43FDF24420214DEE007F004F /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Show.swift; path = "../../../iOSWorkshop/Tutorial Resources/Show.swift"; sourceTree = "<group>"; };
 		43FDF24620214E97007F004F /* tvShows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tvShows.json; sourceTree = "<group>"; };
 		43FDF24820214E98007F004F /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		43FDF24C20214EEF007F004F /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		43EABFBB2021423F00D2870C /* WWC */ = {
 			isa = PBXGroup;
 			children = (
-				43FDF24420214DEE007F004F /* Show.swift */,
+				43FDF24C20214EEF007F004F /* Networking.swift */,
 				43FDF24820214E98007F004F /* Show.swift */,
 				43FDF24620214E97007F004F /* tvShows.json */,
 				43EABFBC2021423F00D2870C /* AppDelegate.swift */,
@@ -213,8 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EABFBF2021423F00D2870C /* ViewController.swift in Sources */,
+				43FDF24D20214EEF007F004F /* Networking.swift in Sources */,
 				43EABFBD2021423F00D2870C /* AppDelegate.swift in Sources */,
-				43FDF24520214DEE007F004F /* Show.swift in Sources */,
 				43FDF24B20214E98007F004F /* Show.swift in Sources */,
 				43EABFDD20214A8200D2870C /* ImageLabelCell.swift in Sources */,
 			);

@@ -3,6 +3,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var shows: [Show]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,22 +14,27 @@ class ViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.estimatedRowHeight = 10 // needs a default
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // get stubbed show data
+        shows = getFakeData()
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // only going to display one row in table view
-        return 1
+        guard let shows = shows else { return 0 }
+
+        return shows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let shows = shows else { return UITableViewCell() }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageLabelCell") as! ImageLabelCell
-        // Grab the show from the model
-//        let tvShow = shows[indexPath.row] as Show
-        // Set the label using the placeholder string
-        let tvShowName = "TV Show Name"
-        cell.setup(labelName: tvShowName, imageName: nil)
+        let tvShow = shows[indexPath.row] as Show
+
+        cell.setup(labelName: tvShow.artistName, imageName: tvShow.imageName)
+
         return cell
     }
     
