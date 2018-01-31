@@ -1,25 +1,34 @@
-//
-//  ViewController.swift
-//  WWC
-//
-//  Created by Christina Chan on 2018-01-30.
-//  Copyright © 2018 Christina Chan. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // tabble view properties
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.estimatedRowHeight = 10 // needs a default
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // only going to display one row in table view
+        return 1
     }
-
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // provide an empty placeholder cell
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // set a table view header
+        return "Shows"
+    }
 }
 
