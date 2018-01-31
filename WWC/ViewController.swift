@@ -22,8 +22,13 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // provide an empty placeholder cell
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageLabelCell") as! ImageLabelCell
+        // Grab the show from the model
+//        let tvShow = shows[indexPath.row] as Show
+        // Set the label using the placeholder string
+        let tvShowName = "TV Show Name"
+        cell.setup(labelName: tvShowName, imageName: nil)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
